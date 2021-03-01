@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>DDB viewer</title>
+    <meta name="description" content="DDB Viewer" />
+    <meta name="author" content="Tomasz Wawrzyniak" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container" style="max-width: 1600px">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">Preview</div>
+            <div class="card-body">
+              <canvas id="preview-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">Parameters</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Color pallet</label>
+                <select class="form-control" id="color-pallet">
+                  <option value="8">8 bit</option>
+                  <option value="16" selected>16 bit</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <label for="file-input">DDB image</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="file-input" accept=".ddb"/>
+                    <label class="custom-file-label" for="custom-file-input" id="file-input-text" >Choose file</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="width-input">Width</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="width-input" placeholder="Width" />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger" id="width-minus" type="button">-</button>
+                    <button class="btn btn-outline-success" id="width-plus" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="height-input">Height</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="height-input" placeholder="Height" />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger" id="height-minus" type="button">-</button>
+                    <button class="btn btn-outline-success" id="height-plus" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cut-off-octet-input">Cut header octet</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="cut-off-input" placeholder="Cut header octet" />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger" id="cut-off-minus" type="button">-</button>
+                    <button class="btn btn-outline-success" id="cut-off-plus" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hex-source-input">Hex source</label>
+                <textarea class="form-control" id="hex-source-input" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
