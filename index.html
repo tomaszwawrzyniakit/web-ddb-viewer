@@ -64,6 +64,15 @@
                   </div>
                 </div>
               </div>
+              <div class="input-group mb-3">
+                <label for="file-input">BMP patch image</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="patch-file-input" accept=".bmp" />
+                    <label class="custom-file-label" for="custom-file-input" id="patch-file-input-text">Choose file</label>
+                  </div>
+                </div>
+              </div>
               <div class="form-group">
                 <label for="width-input">Width</label>
                 <div class="input-group">
@@ -97,18 +106,17 @@
               <div class="form-group">
                 <label for="hex-source-input">Hex DDB source</label>
                 <textarea class="form-control" id="hex-source-input" rows="3"></textarea>
-              </div>              
+              </div>
               <div class="form-group">
                 <label for="bmp-source-input">Hex BMP source</label>
                 <textarea class="form-control" id="bmp-source-input" rows="3"></textarea>
               </div>
 
-
               <div class="form-group">
                 <button class="btn btn-primary" id="prepare-bmp" type="button">Prepare bmp</button>
                 <button class="btn btn-primary" id="download-bmp" type="button">Download bmp</button>
+                <button class="btn btn-primary" id="download-ddb" type="button">Download ddb</button>
               </div>
-
             </div>
           </div>
         </div>
