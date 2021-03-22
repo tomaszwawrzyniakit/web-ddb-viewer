@@ -13,7 +13,7 @@
     />
 </head>
 <body>
-<div class="container" style="max-width: 1600px">
+<div class="container" style="max-width: 1800px">
     <div class="row">
         <div class="col">
             <div class="card">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="card-footer">
                     Copyright © 2021 twawrzyn Wanna help? <a title="twawrzyn" class=""
-                                                             href="https://github.com/tomaszwawrzyniakit"> Version: 0.1
+                                                             href="https://github.com/tomaszwawrzyniakit"> Version: 0.2
                     <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
                          aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -52,7 +52,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+
+        <div class="col-3">
             <div class="card">
                 <div class="card-header">Parameters</div>
                 <div class="card-body">
@@ -67,7 +68,7 @@
                         <label for="file-input">DDB image</label>
                         <div class="input-group">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="file-input" accept=".ddb"/>
+                                <input type="file" class="custom-file-input" id="file-input" accept=".ddb,.bin"/>
                                 <label class="custom-file-label" for="file-input" id="file-input-text">Choose
                                     file</label>
                             </div>
@@ -150,6 +151,22 @@
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary" id="download-ddb" type="button">Download ddb/bin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">File list</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="list-group" id="file-list" style="
+                             height: 800px;
+                             overflow: hidden;
+                             overflow-y: scroll;    margin: -21px;
+                        ">
+                        </div>
                     </div>
                 </div>
             </div>
